@@ -162,7 +162,7 @@ def prepare_video(video_path:str, resolution:int, device, dtype, normalize=True,
     k = float(resolution) / max(h, w)
     h *= k
     w *= k
-    h = int(np.round(h / 64.0)) * 64
+    h = int(np.round(h / 36.0)) * 36
     w = int(np.round(w / 64.0)) * 64
 
     video = Resize((h, w), interpolation=InterpolationMode.BILINEAR, antialias=True)(video)
